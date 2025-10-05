@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CDN -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet"> 
+    <!-- STYLE -->
+    <style>
+        body {
+            text-align: center;
+            font-family: "Lexend Deca", sans-serif;
+            background-color: rgb(224, 255, 224);
+        }
+        .container {
+            background-color: rgb(149, 194, 123);
+            border-radius: 15px;
+            margin: 20px;
+            padding: 15px;
+        }
+
+        .containerDetails {
+            background-color:rgb(114, 146, 95);
+            border-radius: 15px;
+            white-space: pre-wrap;
+            margin: 20px;
+        }
+
+        .containerDetails h4 {
+            margin: 4px 0; 
+            line-height: 1; 
+        }
+    </style>
+
+    <title>Skills Test</title>
+</head>
+<body>
+<div class="container">
+    <h1>Clothing Ordering System</h1>
+
+    <h3>Clothing items:</h3>
+    <form>
+        <input type="checkbox" class="box" id="ballet" value="1700">
+        <label> Light Pink Ballet Flats - P1,700</label>
+        <br>
+        <input type="checkbox" class="box" id="brown" value="1500">
+        <label> Brown Floral Flats - P1,500</label>
+        <br>
+        <input type="checkbox" class="box" id="floral" value="1200">
+        <label> Pink Floral Skirt - P1,200</label>
+        <br>
+        <input type="checkbox" class="box" id="blouse" value="1000">
+        <label> Blue Puffy Sleeved Blouse - P1,000</label>
+        <br>
+        <input type="checkbox" class="box" id="white" value="2000">
+        <label> Pearl Chiffon White Dress - P2,000</label>
+        <br>
+        <br>
+
+    <h3>Customer Details:</h3>
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name" id="name">
+        <br>   
+        <label>Address:</label>
+        <input type="text" placeholder="Enter your address" id="address">
+        <br>
+        <label>Contact number:</label>
+        <input type="number" placeholder="Enter your contact number" id="contact">
+
+        <br>
+        <input type="button"  py-click="order" value="Create Order">
+    </form>
+</div>
+
+<div class="containerDetails">
+    <p id="details">
+        Order for:
+        Address:
+        Contact:
+    </p>
+    <p id="total">Total: 0</p>
+</div>
+
+<py-script src="main.py"></py-script>
+
+</body>
+</html>
